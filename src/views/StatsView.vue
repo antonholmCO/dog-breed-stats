@@ -51,9 +51,9 @@
     </div>
 
     <div v-else>
-        <div id="result-card">
-            <img id="result-img" src="https://api-ninjas.com/images/dogs/french_bulldog.jpg" alt="" />
-            <div id="result-text">
+        <div id="result-card" class="fle flex-col m-4 rounded bg-red-500">
+            <img id="result-img" :src="dogInfo.image_link" alt="" class="rounded"/>
+            <div id="result-text" class="bg-green-500">
                 <h1>{{ dogBreed }}</h1>
                 <p>[general description]</p>
             </div>
@@ -64,6 +64,7 @@
             
             <div id="statistics">
                 <Stat attribute="Protectiveness" :value="dogInfo.protectiveness" />
+                <Stat attribute="Good with Children" :value="dogInfo.good_with_children" />
             </div>
         </section>
         <RouterLink to="/">Home</RouterLink>

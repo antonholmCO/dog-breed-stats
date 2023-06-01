@@ -52,7 +52,8 @@
 <template>
     <div class="stat flex flex-col max-w-xs">
         <span class="stat-title mx-auto text-lg">{{ props.attribute }}</span>
-        <canvas ref="statChart" class="w-2"></canvas>
+        <div class="stat-value mx-auto">{{ props.value }}/5</div>
+        <canvas ref="statChart" class=""></canvas>
     </div>
 </template>
 
