@@ -1,11 +1,14 @@
 <script setup>
+    import { ref } from "vue";
     import { useRoute } from 'vue-router'
     import router from "../router/index"
     import axios from "axios"
     import apikey from "../apikey";
-    
+
     const route = useRoute()
     const props = defineProps(["breed"]);
+
+    let dogInfo = ref({});
     
     let dogBreed = route.params.breed;
     
@@ -17,6 +20,7 @@
     })
     .then(function (response) {
         console.log(response.data[0]);
+        dogInfo.value = response.data[0];
     })
     .catch(function(error) {
         router.push({ name: 'home'})
@@ -39,15 +43,15 @@
         <div id="statistics">
             <div class="stat">
                 <span class="stat-title">Barking</span>
-                <div class="stat-value">1/5</div>
+                <div class="stat-value">{{ dogInfo.barking }}</div>
             </div>
             <div class="stat">
                 <span class="stat-title">Energy</span>
-                <div class="stat-value">3/5</div>
+                <div class="stat-value">{{ dogInfo.energy }}</div>
             </div>
         </div>
-        
     </section>
+    <RouterLink to="/">Home</RouterLink>
 </template>
 
 <style>
