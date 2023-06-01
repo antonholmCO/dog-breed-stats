@@ -3,17 +3,22 @@ import HomeView from '../views/HomeView.vue'
 import StatsView from '../views/StatsView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+    history: createWebHistory(import.meta.env.BASE_URL),
+        routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+        path: '/',
+        name: 'home',
+        component: HomeView
     },
     {
-      path: '/stats/:breed',
-      name: 'stats',
-      component: StatsView
+        path: '/stats/:breed',
+        name: 'stats',
+        component: StatsView
+    },
+    {
+        path: '/:pathMatch(.*)*', 
+        name: 'not-found', 
+        component: HomeView
     }
   ]
 })
