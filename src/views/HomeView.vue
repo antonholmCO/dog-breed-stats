@@ -20,8 +20,10 @@ function queryApi(dogBreed) {
         contentType: "application/json"
     })
     .then(function (response) {
-        let breed = response.data[0].name;
-        router.push({ name: 'stats', params: {breed: breed}})
+        let dogData = response.data[0];
+        let dogDataStr = JSON.stringify(dogData);
+
+        router.push({ name: 'stats', params: {breedName: dogData.name}, state: {dogDataStr} })
     })
     .catch(function(error) {
         alert("not a dog breed");

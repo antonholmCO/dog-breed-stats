@@ -1,30 +1,43 @@
 <script setup>
     import { ref } from "vue";
-    import { useRoute } from 'vue-router'
-    import router from "../router/index"
+    import { useRoute, useRouter } from 'vue-router'
     import axios from "axios"
     import apikey from "../apikey";
 
-    const route = useRoute()
-    const props = defineProps(["breed"]);
-
+    const props = defineProps(["breedName"])
+    const router = useRouter();
+    const route = useRoute();
+    
     let dogInfo = ref({});
-    
-    let dogBreed = route.params.breed;
-    
-    axios({
-        method: "GET",
-        url: "https://api.api-ninjas.com/v1/dogs?name=" + dogBreed,
-        headers: {"X-Api-Key": apikey},
-        contentType: "application/json"
-    })
-    .then(function (response) {
-        console.log(response.data[0]);
-        dogInfo.value = response.data[0];
-    })
-    .catch(function(error) {
-        router.push({ name: 'home'})
-    });
+    let dogDataStr = history.state.dogDataStr;
+    let dogBreed = route.params.breedName;
+
+    if (dogDataStr == null) {
+        axios({
+            method: "GET",
+            url: "https://api.api-ninjas.com/v1/dogs?name=" + dogBreed,
+            headers: {"X-Api-Key": apikey},
+            contentType: "application/json"
+        })
+        .then(function (response) {
+            if (response.data.length == 0) {
+                throw new Error("No response, faulty dog breed");
+            }
+
+            dogInfo.value = response.data[0];
+        })
+        .catch(function(error) {
+            console.log("erorrrrr")
+            router.push({ name: 'home'})
+        });
+        
+    } else {
+        let dogData = JSON.parse(dogDataStr);
+        dogInfo.value = dogData;
+    }
+
+
+
 
 </script>
 
@@ -47,7 +60,7 @@
             </div>
             <div class="stat">
                 <span class="stat-title">Energy</span>
-                <div class="stat-value">{{ dogInfo.energy }}</div>
+                <div class="stat-value">1/5</div>
             </div>
         </div>
     </section>
