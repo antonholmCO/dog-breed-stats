@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import axios from "axios";
 import apikey from "../apikey";
+import router from "../router/index"
 
 const userInput = ref("");
 
@@ -19,6 +20,11 @@ function queryApi(dogBreed) {
     })
     .then(function (response) {
         console.log(response.data);
+        //todo save data here
+        router.push({ name: 'stats', params: { breed: response.data[0].name } })
+    })
+    .catch(function(error) {
+        alert("not a dog breed");
     });
 }
 
