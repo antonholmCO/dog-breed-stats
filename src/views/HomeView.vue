@@ -2,7 +2,8 @@
 import { ref } from "vue";
 import axios from "axios";
 import apikey from "../apikey";
-import router from "../router/index"
+import { useRouter } from 'vue-router';
+const router = useRouter(); 
 
 const userInput = ref("");
 
@@ -30,12 +31,16 @@ function queryApi(dogBreed) {
 </script>
 
 <template>
-    <h1>DogBreedPicker</h1>
-    <h2>Information about your dog breed</h2>
-    <form>
-        <input v-model="userInput" id="search-field" />
-        <button id="search-button" @click="getDogBreed">Search</button>
-    </form>
+    <section class="flex justify-center">
+        <div class="container relative top-44 flex flex-col items-center">
+            <h1 class="text-4xl">Dog Breed Picker</h1>
+            <h2 class="text-md mt-1">Information about your dog breed</h2>
+            <form class="relative top-10 w-4/6 flex flex-col">
+                <input v-model="userInput" id="search-field" placeholder="Enter a dog breed" class="mx-auto w-full max-w-xl px-4 py-2 rounded-md border border-emerald-500 shadow-md text-lg" />
+                <button id="search-button" @click="getDogBreed" class="mt-6 mx-auto px-6 py-1.5 border rounded-md  bg-emerald-500 text-stone-50 hover:bg-emerald-600 active:bg-emerald-900 ">Search</button>
+            </form>
+        </div>
+    </section>
 </template>
 
 <style>
