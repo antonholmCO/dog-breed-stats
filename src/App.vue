@@ -6,12 +6,14 @@
 </script>
 
 <template>
-    <Header />
-    <main>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterView />
-    </main>
-    <Footer />
+
+    <div class="flex flex-col min-h-screen">
+        <Header />
+        <main class="flex-1">
+            <RouterView />
+        </main>
+        <Footer />
+    </div>
 </template>
 
 <style scoped>
