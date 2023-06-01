@@ -3,6 +3,7 @@
     import { useRoute, useRouter } from 'vue-router'
     import axios from "axios"
     import apikey from "../apikey";
+    import Stat from "../components/Stat.vue"
 
     const props = defineProps(["breedName"])
     const router = useRouter();
@@ -62,14 +63,7 @@
             <h2><span>{{ dogBreed }}</span> Statistics</h2>
             
             <div id="statistics">
-                <div class="stat">
-                    <span class="stat-title">Barking</span>
-                    <div class="stat-value">{{ dogInfo.barking }}</div>
-                </div>
-                <div class="stat">
-                    <span class="stat-title">Energy</span>
-                    <div class="stat-value">1/5</div>
-                </div>
+                <Stat attribute="Protectiveness" :value="dogInfo.protectiveness" />
             </div>
         </section>
         <RouterLink to="/">Home</RouterLink>
