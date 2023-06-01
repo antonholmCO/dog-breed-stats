@@ -19,9 +19,8 @@ function queryApi(dogBreed) {
         contentType: "application/json"
     })
     .then(function (response) {
-        console.log(response.data);
-        //todo save data here
-        router.push({ name: 'stats', params: { breed: response.data[0].name } })
+        let breed = response.data[0].name;
+        router.push({ name: 'stats', params: {breed: breed}})
     })
     .catch(function(error) {
         alert("not a dog breed");

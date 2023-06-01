@@ -13,7 +13,8 @@ const router = createRouter({
     {
         path: '/stats/:breed',
         name: 'stats',
-        component: StatsView
+        component: StatsView,
+        props: true
     },
     {
         path: '/:pathMatch(.*)*', 
