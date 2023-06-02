@@ -4,15 +4,18 @@ Dog Breed Stats is an responsive website where users can find attribute statisti
 ## Screenshots
 
 
+## API
+I used the [Dogs API](https://api-ninjas.com/api/dogs) provided by API Ninjas for this project.
+
 ## Frameworks & Libraries 
 I used the following frameworks and libraries in this project. The two external libraries which were an requirement for the project are displayed in bold text. 
-- Vue 3 + Vite
-- Tailwind CSS
-- **Axios** for API calls
-- **Chart.js** for creating doughnut charts to display they breed statistics
+- [Vue 3](https://vuejs.org/) + [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- **[Axios](https://axios-http.com/)** for API calls
+- **[Chart.js](https://www.chartjs.org/docs/latest/)** for creating doughnut charts to display they breed statistics
 
 
-## Run instructions
+## Getting started
 1. To host the website, an API key is needed. It can be aquired [here](https://api-ninjas.com/register) for free by registering for an account. 
 
 2. Once an API key has been aquired, create a file called **apikey.js** and put it in the **src** folder. 
@@ -36,7 +39,7 @@ npm run dev
 
 5. Navigate to http://localhost:5173/ in your browser.
 
-##### Compile and Minify for Production
+##### Compile and build for Production
 ```sh
 npm run build
 ```
