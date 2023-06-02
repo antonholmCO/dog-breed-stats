@@ -39,7 +39,7 @@
         },
         options: {
             backgroundColor: colors,
-            cutout: 55,
+            cutout: 62,
             spacing: 3
         },
       })
@@ -50,7 +50,7 @@
 </script>
 
 <template>
-    <div class="stat flex flex-col max-w-xs mx-auto w-40">
+    <div class="stat flex flex-col max-w-xs mx-auto w-44">
         <span class="stat-title mx-auto text-lg">{{ props.attribute }}</span>
         <div class="stat-value mx-auto">{{ props.value }}/5</div>
         <canvas ref="statChart" class=""></canvas>
