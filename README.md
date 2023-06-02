@@ -1,5 +1,5 @@
 # Dog Breed Stats
-Dog Breed Stats is an responsive website where users can find attribute statistics of different dog breeds. Users search for a dog breed, and is then shown an image of the breed, alongside it's stats presented visually by doughnout charts. It's an extra assignment for DA395A to pass the course with distinction.
+Dog Breed Stats is an responsive website where users can find attribute statistics of different dog breeds. Users search for a dog breed, and is then shown an image of the breed, alongside it's stats presented visually by doughnut charts. It's an extra assignment for DA395A to pass the course with distinction.
 
 ## Screenshots
 
