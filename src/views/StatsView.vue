@@ -4,6 +4,7 @@
     import axios from "axios"
     import apikey from "../apikey";
     import Stat from "../components/Stat.vue"
+    import Button from "../components/Button.vue"
 
     const props = defineProps(["breedName"])
     const router = useRouter();
@@ -82,7 +83,9 @@
                 <Stat attribute="Energy" :value="dogInfo.energy" />
             </div>
         </section>
-        <RouterLink to="/">Go back ></RouterLink>   <!-- change to button and do push instead -->
+        <div class="flex justify-center mt-16 lg:mt-24">
+            <Button text="Search again" path="/"/>
+        </div>
     </div>
 </template>
 
