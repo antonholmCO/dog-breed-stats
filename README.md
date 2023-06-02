@@ -6,8 +6,8 @@ Dog Breed Stats is an responsive website where users can find attribute statisti
 
 ## Screenshots
 ### Desktop
-<img width="400" src="./screenshots/desktop1.png" />
-<img width="400" src="./screenshots/desktop2.png" />
+<img width="500" src="./screenshots/desktop1.png" />
+<img width="500" src="./screenshots/desktop2.png" />
 
 ### Mobile
 <img width="300" src="./screenshots/mobile1.png" />
