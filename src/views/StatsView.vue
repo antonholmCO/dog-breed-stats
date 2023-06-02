@@ -64,23 +64,23 @@
             <h2 class="mx-auto text-center text-2xl text-emerald-500 md:text-3xl"><span>{{ dogInfo.name }}</span> Statistics</h2>
             <h3 class="mx-auto text-center text-2xl text-emerald-500 md:text-1xl mt-8 md:mt-10">Desired attributes</h3>
             <div id="statistics" class="inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-6">
-                <Stat attribute="Trainability" :value="dogInfo.trainability" />
-                <Stat attribute="Protectiveness" :value="dogInfo.protectiveness" />
-                <Stat attribute="Playfulness" :value="dogInfo.playfulness" />
-                <Stat attribute="Good with children" :value="dogInfo.good_with_children" />
-                <Stat attribute="Good with other dogs" :value="dogInfo.good_with_other_dogs" />
-                <Stat attribute="Good with strangers" :value="dogInfo.good_with_strangers" />
+                <Stat attribute="Trainability" :value="dogInfo.trainability" :positive="true" />
+                <Stat attribute="Protectiveness" :value="dogInfo.protectiveness" :positive="true" />
+                <Stat attribute="Playfulness" :value="dogInfo.playfulness" :positive="true" />
+                <Stat attribute="Good with children" :value="dogInfo.good_with_children" :positive="true" />
+                <Stat attribute="Good with other dogs" :value="dogInfo.good_with_other_dogs" :positive="true" />
+                <Stat attribute="Good with strangers" :value="dogInfo.good_with_strangers" :positive="true" />
             </div>
         </section>
 
         <section id="statistics-section" class="mt-12 flex flex-col lg:mt-20" >
             <h3 class="mx-auto text-center text-2xl text-emerald-500 md:text-1xl mt-8 md:mt-10">Undesired attributes</h3>
             <div id="statistics" class="inline-grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mt-6">
-                <Stat attribute="Barking" :value="dogInfo.barking" />
-                <Stat attribute="Drooling" :value="dogInfo.drooling" />
-                <Stat attribute="Shedding" :value="dogInfo.shedding" />
-                <Stat attribute="Grooming" :value="dogInfo.grooming" />
-                <Stat attribute="Energy" :value="dogInfo.energy" />
+                <Stat attribute="Barking" :value="dogInfo.barking" :positive="false" />
+                <Stat attribute="Drooling" :value="dogInfo.drooling" :positive="false" />
+                <Stat attribute="Shedding" :value="dogInfo.shedding" :positive="false" />
+                <Stat attribute="Grooming" :value="dogInfo.grooming" :positive="false" />
+                <Stat attribute="Energy" :value="dogInfo.energy" :positive="false" />
             </div>
         </section>
         <div class="flex justify-center mt-16 lg:mt-24">
