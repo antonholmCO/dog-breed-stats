@@ -6,12 +6,12 @@ Dog Breed Stats is an responsive website where users can find attribute statisti
 
 ## Screenshots
 ### Desktop
-<img width="500" src="https://github.com/antonholmCO/dog-breed-stats/assets/75835960/ea247e3d-7554-4cd6-bcac-870cafcc56c4" />
-<img width="500" src="https://github.com/antonholmCO/dog-breed-stats/assets/75835960/97e84e8b-244e-483b-80af-2a02dfdc5d83" />
+<img width="400" src="./screenshots/desktop1.png" />
+<img width="400" src="./screenshots/desktop2.png" />
 
 ### Mobile
-<img width="300" src="https://github.com/antonholmCO/dog-breed-stats/assets/75835960/fd205f26-5052-4fc0-a894-68e7c4d201c2" />
-<img width="300" src="https://github.com/antonholmCO/dog-breed-stats/assets/75835960/4114846d-743a-4644-96e6-5ea75a45b4d6" />
+<img width="300" src="./screenshots/mobile1.png" />
+<img width="300" src="./screenshots/mobile2.png" />
 
 ## API
 I used the [Dogs API](https://api-ninjas.com/api/dogs) provided by API Ninjas for this project.
