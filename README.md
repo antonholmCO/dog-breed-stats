@@ -4,6 +4,14 @@ Dog Breed Stats is an responsive website where users can find attribute statisti
 ## Screenshots
 
 
+## Frameworks & Libraries 
+I used the following frameworks and libraries in this project. The two external libraries which were an requirement for the project are displayed in bold text. 
+- Vue 3 + Vite
+- Tailwind CSS
+- **Axios** for API calls
+- **Chart.js** for creating doughnut charts to display they breed statistics
+
+
 ## Run instructions
 1. To host the website, an API key is needed. It can be aquired [here](https://api-ninjas.com/register) for free by registering for an account. 
 
