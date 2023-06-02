@@ -82,7 +82,8 @@
         options: {
             backgroundColor: colors,
             cutout: 62,
-            spacing: 3
+            spacing: 3,
+            events: []
         },
       })
     })
